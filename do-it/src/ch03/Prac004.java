@@ -21,14 +21,16 @@ public class Prac004 {
             }
         }
 
+        int x1, y1, x2, y2, result;
+
         for(int i=0;i<quizNo;i++){
             stringTokenizer = new StringTokenizer(bufferedReader.readLine());
-            int x1= Integer.parseInt(stringTokenizer.nextToken());
-            int y1= Integer.parseInt(stringTokenizer.nextToken());
-            int x2= Integer.parseInt(stringTokenizer.nextToken());
-            int y2= Integer.parseInt(stringTokenizer.nextToken());
+            x1= Integer.parseInt(stringTokenizer.nextToken());
+            y1= Integer.parseInt(stringTokenizer.nextToken());
+            x2= Integer.parseInt(stringTokenizer.nextToken());
+            y2= Integer.parseInt(stringTokenizer.nextToken());
 
-            int result = S[y2][x2]-S[y2][x1-1]-S[y1-1][x2]+S[y1-1][x1-1];
+            result = S[x2][y2]-S[x2][y1-1]-S[x1-1][y2]+S[x1-1][y1-1];
 
             System.out.println(result);
         }
