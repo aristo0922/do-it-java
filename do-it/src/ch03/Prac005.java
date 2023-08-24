@@ -10,8 +10,8 @@ public class Prac005 {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
 
-        long N = Integer.parseInt(stringTokenizer.nextToken());
-        long M = Integer.parseInt(stringTokenizer.nextToken());
+        int N = Integer.parseInt(stringTokenizer.nextToken());
+        int M = Integer.parseInt(stringTokenizer.nextToken());
 
         long[] inputSum = new long[N+1];
         stringTokenizer=new StringTokenizer(bufferedReader.readLine());
@@ -20,13 +20,13 @@ public class Prac005 {
         }
 
         long result =0;
-        long[] remainder = new int[M];
-        for(long i=1;i<=N;i++){
+        long[] remainder = new long[M];
+        for(int i=1;i<=N;i++){
             inputSum[i]%=M;
             if(inputSum[i]==0){
                 result++;
             }
-            remainder[inputSum[i]]++;
+            remainder[(int) inputSum[i]]++;
 
         }
 
