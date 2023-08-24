@@ -38,6 +38,10 @@ bw.newLine(); // 줄바꿈
 bw.flush(); // 남아있는 데이터 모두 출력
 bw.close();
 ```
+<h2> 오답노트</h2>
+```
+remainder[(int) inputSum[i]]++; # int 형으로 [] 안에 넣기
+```
 
 
 ---
