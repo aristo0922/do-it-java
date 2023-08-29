@@ -46,4 +46,5 @@ remainder[(int) inputSum[i]]++; # int 형으로 [] 안에 넣기
 
 ---
 <h3>reference</h3>
-https://rlakuku-program.tistory.com/33
+https://rlakuku-program.tistory.com/33 <br/>
+https://library1008.tistory.com/16
