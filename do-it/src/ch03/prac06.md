@@ -19,5 +19,36 @@ N의 최댓값은 10,000,000으로 매우 크게 잡혀 있다<br/>
 -> O(n)의 시간 복잡도 알고리즘을 사용해야 한다.<br/>
 ### 투포인터
 이런 상황에서 자주 사용하는 방법<br/>
-연속된 자여눗의 합을 구하는 것이 문제이니 시작 인덱스ㅗ아 종료 인덱스를 지정하여 연속된 수를 표현<br/>
+연속된 자연수의 합을 구하는 것이 문제이니 시작 인덱스와 종료 인덱스를 지정하여 연속된 수를 표현<br/>
 시작 인덱스, 종료 인덱스를 두 포인터로 지정<br/>
+
+```aidl
+        # 시작 인덱스와 마지막 인덱스, count, 모든 수의 합을 1로 초기화
+        int count =1;
+        int start_index=1;
+        int end_index=1;
+        int sum=1;
+
+# end_index가 사용자의 입력 값과 동일해질 때 까지 반복한다.
+# 인덱스의 크기는 1에서 input값으로 증가
+        while(end_index!=input){
+            if(sum==input){
+            #현재 상태 카운트
+                count++;
+                # 탐색하는 수의 범위를 넓힌다.
+                end_index++;
+                #다음에 탐색할 값을 설정
+                sum=sum+end_index;
+            } else if(sum > input){
+            # 연속된 수의 값의 합이 input 값 보다 크다.
+            # 연속된 자연수의 범위를 줄이기 위해 start_index 값을 줄인다.
+                sum = sum-start_index;
+                start_index++;
+            } else{
+            # 연속된 수의 값의 합이 input 값보다 작다
+            # 연속된 자연수의 범위를 늘리기 위해 end_index ++
+                end_index++;
+                sum = sum+end_index;
+            }
+        }
+```
