@@ -6,15 +6,27 @@ import java.util.Scanner;
 public class Prac006 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String input = scan.nextBigInteger().toString();
+        int input = scan.nextInt();
 
-        int result =0;
-        String [] toList = input.split("");
+        int count =1;
+        int start_index=1;
+        int end_index=1;
+        int sum=1;
 
-        for(int i=0; i< input.length(); i++){
-            result += Integer.parseInt(toList[i]);
+        while(end_index!=input){
+            if(sum==input){
+                count++;
+                end_index++;
+                sum=sum+end_index;
+            } else if(sum > input){
+                sum = sum-start_index;
+                start_index++;
+            } else{
+                end_index++;
+                sum = sum+end_index;
+            }
         }
 
-        System.out.println(result);
+        System.out.println(count);
     }
 }
