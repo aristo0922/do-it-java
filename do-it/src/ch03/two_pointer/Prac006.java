@@ -1,4 +1,4 @@
-package ch03;
+package ch03.two_pointer;
 
 import java.util.Scanner;
 
