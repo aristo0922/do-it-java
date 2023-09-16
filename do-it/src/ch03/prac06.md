@@ -43,7 +43,7 @@ N의 최댓값은 10,000,000으로 매우 크게 잡혀 있다<br/>
             # 연속된 수의 값의 합이 input 값 보다 크다.
             # 연속된 자연수의 범위를 줄이기 위해 start_index 값을 줄인다.
                 sum = sum-start_index;
-                start_index++;
+                start_index++;                                                                                                                                                  
             } else{
             # 연속된 수의 값의 합이 input 값보다 작다
             # 연속된 자연수의 범위를 늘리기 위해 end_index ++
