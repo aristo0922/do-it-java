@@ -1,15 +1,17 @@
 <h2>BufferedReader</h2>
+
+### class 상속
+```BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));```
+
+### 한 줄 읽기
+```StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());```
+
+### 한 글자 씩 분할해 저장
 ```
-# class 상속
-BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-
-# 한 줄 읽기
-StringTokenizer stringTokenizer = new StringTokenizer(bufferedReader.readLine());
-
-# 한 글자 씩 분할해 저장
 int suNo = Integer.parseInt(stringTokenizer.nextToken());
 int quizNo = Integer.parseInt(stringTokenizer.nextToken());
 ```
+
 <br/>
 <h3>BufferedReader</h3>
 * 버퍼를 사용하여 읽는 함수<br/>
@@ -30,6 +32,8 @@ int quizNo = Integer.parseInt(stringTokenizer.nextToken());
 * 공백 기준으로 분할한 문자열을 배열에 저장
 
 <h2>BufferedWriter</h2>
+
+
 ```aidl
 BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out)); // 선언
 String str = "abcdef"; // 출력할 문자열
@@ -38,7 +42,10 @@ bw.newLine(); // 줄바꿈
 bw.flush(); // 남아있는 데이터 모두 출력
 bw.close();
 ```
+
+
 <h2> 오답노트</h2>
+
 ```
 remainder[(int) inputSum[i]]++; # int 형으로 [] 안에 넣기
 ```
