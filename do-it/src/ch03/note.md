@@ -1,5 +1,5 @@
 <h2>BufferedReader</h2>
-```aidl
+```
 # class 상속
 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
 
